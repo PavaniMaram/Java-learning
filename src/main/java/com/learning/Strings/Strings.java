@@ -58,14 +58,31 @@ public class Strings {
             Scanner sc = new Scanner(System.in);
             System.out.println("Enter the String");
             String data = sc.nextLine();
-            
-            // Use StringBuilder to reverse the string
             StringBuilder sb = new StringBuilder(data);
-            sb.reverse(); // This method directly reverses the string
+            sb.reverse(); 
 
             System.out.println("Reversed String: " + sb.toString());
             sc.close();
         }
+        public static void reverseword() {
+        	Scanner sc=new Scanner(System.in);
+        	System.out.println("Enter the String");
+        	String data=sc.nextLine();
+        	String[] words = data.split(" ");
+            StringBuilder reversedString = new StringBuilder();
+            for (int i=0;i<words.length;i++) {
+            	String w=words[i];
+                StringBuilder reversedWord = new StringBuilder(w);
+                StringBuilder r= reversedWord.reverse();
+                reversedString.append(r).append(" ");
+            }
+            System.out.println( reversedString.toString().trim());
+            sc.close();
+        	}
+        	
+        	
+        	
+        
         
             
  
@@ -76,7 +93,10 @@ public class Strings {
             //countWords();
         	//totalOccurrences();
         	//reverseString();
-        	reverseString2();
+        	//reverseString2();
+        	reverseword();
+        	
+        	
             
         }
 }
